@@ -1,0 +1,112 @@
+h1{
+    text-align: center;
+    position:static;
+    font-family:sans-serif;
+
+}
+h4{
+    background-color:rgb(167, 168, 151);
+    padding: 10px;
+    border: 0ch;
+    margin: 0%;
+    text-align: center;
+    position: sticky;
+    top: 1px;
+    font-family:sans-serif;
+    padding-left: 8px;
+    padding-right: 8px;
+    z-index:2
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    grid-template-rows: auto;
+    padding: 10px;
+    grid-column-gap: 2%;
+    grid-row-gap: 5%;
+
+}
+.grid-container div {
+    font-family:sans-serif;
+    padding: 0px;
+    border: 1px rgb(109, 108, 108);
+    vertical-align: top;
+    box-shadow: 10px 10px 30px grey;
+
+
+}
+.grid-container p {
+    padding: 10px;
+
+
+}
+.grid-container h1 {
+    padding: 10px;
+    font-family:sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    text-align: left;
+}
+.item1 {
+grid-row: 1 / span2;
+}
+.footer{
+    background-color:rgb(27, 27, 27);
+    color: white;
+    padding: 1%;
+    text-align: left;
+    position: sticky;
+    top: 1px;
+    font-family:sans-serif;
+    padding-left: 8px;
+    padding-right: 8px;
+    z-index:2
+}
+.cal{
+
+    text-align: center;
+    padding: 1%;
+    background-color: red;
+    color: white;
+    font-size: 50px;
+}
+/*.cal_keys{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    align-content: center;
+    text-align: center;
+    padding: 1%;
+    background-color:gray;
+    color: white;
+    font-size: 50px;
+}*/
+input[type=text], select {
+    width: 100%;
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .cal_keys {
+    display: grid;
+    width: 80%;
+    grid-template-columns: auto auto auto;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=button]
+  {
+    min-height: 50px;
+    padding: 10px;
+    font-size: 1.2em;
+  }

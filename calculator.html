@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="css/site.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/calculator.js">
+    </script>
+</head>
+
+<body>
+    <div class="cal">
+        <p draggable="true" onclick="changedata()" ondrag="changestyle()" id="cal">click me</p>
+    </div>
+    <hr style="width: auto; color:black">
+    <div>
+        <div>
+            <input type="text" id="result_dispaly" onclick="" value="" placeholder="0" onchange="test()" />
+        </div>
+        <!--disabled to control all inputs-->
+        <div class="cal_keys">
+            <input type="button" id="key_1" onclick="num_keys(1)" value="1" />
+            <input type="button" id="key_2" onclick="num_keys(2)" value="2" />
+            <input type="button" id="key_3" onclick="num_keys(3)" value="3" />
+            <input type="button" id="key_4" onclick="num_keys(4)" value="4" />
+            <input type="button" id="key_5" onclick="num_keys(5)" value="5" />
+            <input type="button" id="key_6" onclick="num_keys(6)" value="6" />
+            <input type="button" id="key_7" onclick="num_keys(7)" value="7" />
+            <input type="button" id="key_8" onclick="num_keys(8)" value="8" />
+            <input type="button" id="key_9" onclick="num_keys(9)" value="9" />
+            <input type="button" id="dot" onclick="decimal()" value="." />
+            <input type="button" id="key_0" onclick="num_keys(0)" value="0" />
+            <input type="button" id="clear" onclick="clear()" value="CE" />
+        </div>
+    </div>
+    <div class="cal_keys">
+        <input type="button" id="op_1" onclick="opration_keys1()" value="+" />
+        <input type="button" id="key_2" onclick="num_keys2()" value="-" />
+    </div>
+</body>
+
+</html>
