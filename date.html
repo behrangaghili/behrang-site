@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Search</title>
+    <title> تقویم شمسی</title>
     <link rel="stylesheet" href="css/date.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="js/date.js">
@@ -12,6 +12,12 @@
 </head>
 
 <body>
+ <!--    <div>
+        <h1>
+            <p onload="find_date_short()" type="text" id="write_date" placeholder="today" class="write_date"></p>
+            <p onload="find_day_week()"  type="text" id="write_date" placeholder="today" class="write_date"></p>
+        </h1>
+    </div> -->
     <div>
         <p class="find_date" style="border: 0px; font-size: 40px;" !important> تبدیل تاریخ
             <br>
@@ -20,15 +26,15 @@
         <hr style="width: 80%;" !important>
 
     </div>
+        <!--   miladi be shamsi -->
     <div class="left">
-        <p   style="font-size: 40px;" !important> انتخاب سال به میلادی
+        <p style="font-size: 40px;" !important> انتخاب سال به میلادی <br><span style="font-size: x-large;"
+                !important>Select Gregorian date</span>
         </p>
-        <p style="font-size: x-large;" !important>
-            Select Gregorian date
-        </p>
-        
+
+
         <p style="font-size: xx-large;" !important>
-            <select id="date_years" class="form-control">
+            <select id="date_years"  >
                 <option value="1917">1917</option>
                 <option value="1918">1918</option>
                 <option value="1919">1919</option>
@@ -231,9 +237,9 @@
                 <option value="2115">2115</option>
                 <option value="2116">2116</option>
             </select>
-            <select id="date_months" class="form-control">
+            <select id="date_months"  >
                 <option value="0" selected="selected">January</option>
-                <option value="1" >February</option>
+                <option value="1">February</option>
                 <option value="2">March</option>
                 <option value="3">April</option>
                 <option value="4">May</option>
@@ -245,7 +251,7 @@
                 <option value="10">November</option>
                 <option value="11">December</option>
             </select>
-            <select id="date_days" class="form-control">
+            <select id="date_days"  >
                 <option value="1" selected="selected">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -280,39 +286,298 @@
             </select>
         </p>
         <p>
-            <input onclick=" converted_date()" style="background-color: brown;" !important type="button" id="miladi_shamsi" value="convert-تبدیل"class="left">
+            <input onclick=" j_converted_date()" style="background-color: brown;" !important type="button"
+                id="miladi_shamsi" value="convert-تبدیل" class="left">
         </p>
     </div>
-    <p><hr></p>
-    <input style="color: aliceblue;background-color: rgb(112, 5, 5);" !important class="left" type="text" placeholder="converted date" id="m_date_result" disabled>
-
-        <div class="right">
-            <p style="font-size: xx-large;" !important> انتخاب سال به شمسی
-            </p>
-            <p>
-                Select Shamsi date
-            </p>
-
-
-        </div>
-        <div>
-            <input type="button" id="find_date" value="today" onclick="find_date()" class="find_date">
-            <input type="button" id="find_date" value="today-short format" onclick="find_date_short()"
-                class="find_date">
-            <input type="button" id="find_date" value="day of week" onclick="find_day_week()" class="find_date">
-            <input type="text" id="write_date" placeholder="today" class="write_date">
-        </div>
+    <p>
         <hr>
-        <div>
-            <input type="button" id="find_date" value="year" onclick="find_year()" class="find_date">
-            <input type="text" id="write_year" placeholder="today" class="write_date">
-        </div>
-        <hr>
+    </p>
+    <input style="color: aliceblue;background-color: rgb(112, 5, 5);" !important class="left" type="text"
+        placeholder="converted date" id="m_date_result" disabled>
+    <hr style="border-top: 1px dashed rgb(0, 0, 0);">
+    <!--    jalali to miladi -->
 
-        <div>
-            <input type="button" id="find_date" value="year" onclick="find_year()" class="find_date">
-            <input type="text" id="write_year" placeholder="today" class="write_date">
-        </div>
+    <div class="left">
+        <p style="font-size: 40px;" !important> انتخاب سال به شمسی <br><span style="font-size: x-large;"
+                !important>Select Shamsi date</span>
+        </p>
+
+
+        <p style="font-size: xx-large;" !important>
+            <select id="persian_date_years"  >
+                <option value="1295">۱۲۹۵</option>
+                <option value="1296">۱۲۹۶</option>
+                <option value="1297">۱۲۹۷</option>
+                <option value="1298">۱۲۹۸</option>
+                <option value="1299">۱۲۹۹</option>
+                <option value="1300">۱۳۰۰</option>
+                <option value="1301">۱۳۰۱</option>
+                <option value="1302">۱۳۰۲</option>
+                <option value="1303">۱۳۰۳</option>
+                <option value="1304">۱۳۰۴</option>
+                <option value="1305">۱۳۰۵</option>
+                <option value="1306">۱۳۰۶</option>
+                <option value="1307">۱۳۰۷</option>
+                <option value="1308">۱۳۰۸</option>
+                <option value="1309">۱۳۰۹</option>
+                <option value="1310">۱۳۱۰</option>
+                <option value="1311">۱۳۱۱</option>
+                <option value="1312">۱۳۱۲</option>
+                <option value="1313">۱۳۱۳</option>
+                <option value="1314">۱۳۱۴</option>
+                <option value="1315">۱۳۱۵</option>
+                <option value="1316">۱۳۱۶</option>
+                <option value="1317">۱۳۱۷</option>
+                <option value="1318">۱۳۱۸</option>
+                <option value="1319">۱۳۱۹</option>
+                <option value="1320">۱۳۲۰</option>
+                <option value="1321">۱۳۲۱</option>
+                <option value="1322">۱۳۲۲</option>
+                <option value="1323">۱۳۲۳</option>
+                <option value="1324">۱۳۲۴</option>
+                <option value="1325">۱۳۲۵</option>
+                <option value="1326">۱۳۲۶</option>
+                <option value="1327">۱۳۲۷</option>
+                <option value="1328">۱۳۲۸</option>
+                <option value="1329">۱۳۲۹</option>
+                <option value="1330">۱۳۳۰</option>
+                <option value="1331">۱۳۳۱</option>
+                <option value="1332">۱۳۳۲</option>
+                <option value="1333">۱۳۳۳</option>
+                <option value="1334">۱۳۳۴</option>
+                <option value="1335">۱۳۳۵</option>
+                <option value="1336">۱۳۳۶</option>
+                <option value="1337">۱۳۳۷</option>
+                <option value="1338">۱۳۳۸</option>
+                <option value="1339">۱۳۳۹</option>
+                <option value="1340">۱۳۴۰</option>
+                <option value="1341">۱۳۴۱</option>
+                <option value="1342">۱۳۴۲</option>
+                <option value="1343">۱۳۴۳</option>
+                <option value="1344">۱۳۴۴</option>
+                <option value="1345">۱۳۴۵</option>
+                <option value="1346">۱۳۴۶</option>
+                <option value="1347">۱۳۴۷</option>
+                <option value="1348">۱۳۴۸</option>
+                <option value="1349">۱۳۴۹</option>
+                <option value="1350">۱۳۵۰</option>
+                <option value="1351">۱۳۵۱</option>
+                <option value="1352">۱۳۵۲</option>
+                <option value="1353">۱۳۵۳</option>
+                <option value="1354">۱۳۵۴</option>
+                <option value="1355">۱۳۵۵</option>
+                <option value="1356">۱۳۵۶</option>
+                <option value="1357">۱۳۵۷</option>
+                <option value="1358">۱۳۵۸</option>
+                <option value="1359">۱۳۵۹</option>
+                <option value="1360">۱۳۶۰</option>
+                <option value="1361">۱۳۶۱</option>
+                <option value="1362">۱۳۶۲</option>
+                <option value="1363">۱۳۶۳</option>
+                <option value="1364">۱۳۶۴</option>
+                <option value="1365">۱۳۶۵</option>
+                <option value="1366">۱۳۶۶</option>
+                <option value="1367">۱۳۶۷</option>
+                <option value="1368">۱۳۶۸</option>
+                <option value="1369">۱۳۶۹</option>
+                <option value="1370">۱۳۷۰</option>
+                <option value="1371">۱۳۷۱</option>
+                <option value="1372">۱۳۷۲</option>
+                <option value="1373">۱۳۷۳</option>
+                <option value="1374">۱۳۷۴</option>
+                <option value="1375">۱۳۷۵</option>
+                <option value="1376">۱۳۷۶</option>
+                <option value="1377">۱۳۷۷</option>
+                <option value="1378">۱۳۷۸</option>
+                <option value="1379">۱۳۷۹</option>
+                <option value="1380">۱۳۸۰</option>
+                <option value="1381">۱۳۸۱</option>
+                <option value="1382">۱۳۸۲</option>
+                <option value="1383">۱۳۸۳</option>
+                <option value="1384">۱۳۸۴</option>
+                <option value="1385">۱۳۸۵</option>
+                <option value="1386">۱۳۸۶</option>
+                <option value="1387">۱۳۸۷</option>
+                <option value="1388">۱۳۸۸</option>
+                <option value="1389">۱۳۸۹</option>
+                <option value="1390">۱۳۹۰</option>
+                <option value="1391">۱۳۹۱</option>
+                <option value="1392">۱۳۹۲</option>
+                <option value="1393">۱۳۹۳</option>
+                <option value="1394">۱۳۹۴</option>
+                <option value="1395">۱۳۹۵</option>
+                <option value="1396">۱۳۹۶</option>
+                <option value="1397">۱۳۹۷</option>
+                <option value="1398">۱۳۹۸</option>
+                <option value="1399" selected="selected">۱۳۹۹</option>
+                <option value="1400">۱۴۰۰</option>
+                <option value="1401">۱۴۰۱</option>
+                <option value="1402">۱۴۰۲</option>
+                <option value="1403">۱۴۰۳</option>
+                <option value="1404">۱۴۰۴</option>
+                <option value="1405">۱۴۰۵</option>
+                <option value="1406">۱۴۰۶</option>
+                <option value="1407">۱۴۰۷</option>
+                <option value="1408">۱۴۰۸</option>
+                <option value="1409">۱۴۰۹</option>
+                <option value="1410">۱۴۱۰</option>
+                <option value="1411">۱۴۱۱</option>
+                <option value="1412">۱۴۱۲</option>
+                <option value="1413">۱۴۱۳</option>
+                <option value="1414">۱۴۱۴</option>
+                <option value="1415">۱۴۱۵</option>
+                <option value="1416">۱۴۱۶</option>
+                <option value="1417">۱۴۱۷</option>
+                <option value="1418">۱۴۱۸</option>
+                <option value="1419">۱۴۱۹</option>
+                <option value="1420">۱۴۲۰</option>
+                <option value="1421">۱۴۲۱</option>
+                <option value="1422">۱۴۲۲</option>
+                <option value="1423">۱۴۲۳</option>
+                <option value="1424">۱۴۲۴</option>
+                <option value="1425">۱۴۲۵</option>
+                <option value="1426">۱۴۲۶</option>
+                <option value="1427">۱۴۲۷</option>
+                <option value="1428">۱۴۲۸</option>
+                <option value="1429">۱۴۲۹</option>
+                <option value="1430">۱۴۳۰</option>
+                <option value="1431">۱۴۳۱</option>
+                <option value="1432">۱۴۳۲</option>
+                <option value="1433">۱۴۳۳</option>
+                <option value="1434">۱۴۳۴</option>
+                <option value="1435">۱۴۳۵</option>
+                <option value="1436">۱۴۳۶</option>
+                <option value="1437">۱۴۳۷</option>
+                <option value="1438">۱۴۳۸</option>
+                <option value="1439">۱۴۳۹</option>
+                <option value="1440">۱۴۴۰</option>
+                <option value="1441">۱۴۴۱</option>
+                <option value="1442">۱۴۴۲</option>
+                <option value="1443">۱۴۴۳</option>
+                <option value="1444">۱۴۴۴</option>
+                <option value="1445">۱۴۴۵</option>
+                <option value="1446">۱۴۴۶</option>
+                <option value="1447">۱۴۴۷</option>
+                <option value="1448">۱۴۴۸</option>
+                <option value="1449">۱۴۴۹</option>
+                <option value="1450">۱۴۵۰</option>
+                <option value="1451">۱۴۵۱</option>
+                <option value="1452">۱۴۵۲</option>
+                <option value="1453">۱۴۵۳</option>
+                <option value="1454">۱۴۵۴</option>
+                <option value="1455">۱۴۵۵</option>
+                <option value="1456">۱۴۵۶</option>
+                <option value="1457">۱۴۵۷</option>
+                <option value="1458">۱۴۵۸</option>
+                <option value="1459">۱۴۵۹</option>
+                <option value="1460">۱۴۶۰</option>
+                <option value="1461">۱۴۶۱</option>
+                <option value="1462">۱۴۶۲</option>
+                <option value="1463">۱۴۶۳</option>
+                <option value="1464">۱۴۶۴</option>
+                <option value="1465">۱۴۶۵</option>
+                <option value="1466">۱۴۶۶</option>
+                <option value="1467">۱۴۶۷</option>
+                <option value="1468">۱۴۶۸</option>
+                <option value="1469">۱۴۶۹</option>
+                <option value="1470">۱۴۷۰</option>
+                <option value="1471">۱۴۷۱</option>
+                <option value="1472">۱۴۷۲</option>
+                <option value="1473">۱۴۷۳</option>
+                <option value="1474">۱۴۷۴</option>
+                <option value="1475">۱۴۷۵</option>
+                <option value="1476">۱۴۷۶</option>
+                <option value="1477">۱۴۷۷</option>
+                <option value="1478">۱۴۷۸</option>
+                <option value="1479">۱۴۷۹</option>
+                <option value="1480">۱۴۸۰</option>
+                <option value="1481">۱۴۸۱</option>
+                <option value="1482">۱۴۸۲</option>
+                <option value="1483">۱۴۸۳</option>
+                <option value="1484">۱۴۸۴</option>
+                <option value="1485">۱۴۸۵</option>
+                <option value="1486">۱۴۸۶</option>
+                <option value="1487">۱۴۸۷</option>
+                <option value="1488">۱۴۸۸</option>
+                <option value="1489">۱۴۸۹</option>
+                <option value="1490">۱۴۹۰</option>
+                <option value="1491">۱۴۹۱</option>
+                <option value="1492">۱۴۹۲</option>
+                <option value="1493">۱۴۹۳</option>
+                <option value="1494">۱۴۹۴</option>
+            </select>
+        
+            <select id="persian_date_months"  >
+                <option value="0">فروردین</option>
+                <option value="1">اردیبهشت</option>
+                <option value="2">خرداد</option>
+                <option value="3">تیر</option>
+                <option value="4">مرداد</option>
+                <option value="5">شهریور</option>
+                <option value="6">مهر</option>
+                <option value="7">آبان</option>
+                <option value="8">آذر</option>
+                <option value="9">دی</option>
+                <option value="10" selected="selected">بهمن</option>
+                <option value="11">اسفند</option>
+            </select>
+        
+            <select id="persian_date_days"  >
+                <option value="1">۱</option>
+                <option value="2">۲</option>
+                <option value="3">۳</option>
+                <option value="4">۴</option>
+                <option value="5">۵</option>
+                <option value="6">۶</option>
+                <option value="7">۷</option>
+                <option value="8">۸</option>
+                <option value="9">۹</option>
+                <option value="10">۱۰</option>
+                <option value="11">۱۱</option>
+                <option value="12">۱۲</option>
+                <option value="13">۱۳</option>
+                <option value="14">۱۴</option>
+                <option value="15">۱۵</option>
+                <option value="16">۱۶</option>
+                <option value="17">۱۷</option>
+                <option value="18">۱۸</option>
+                <option value="19">۱۹</option>
+                <option value="20">۲۰</option>
+                <option value="21">۲۱</option>
+                <option value="22">۲۲</option>
+                <option value="23">۲۳</option>
+                <option value="24" selected="selected">۲۴</option>
+                <option value="25">۲۵</option>
+                <option value="26">۲۶</option>
+                <option value="27">۲۷</option>
+                <option value="28">۲۸</option>
+                <option value="29">۲۹</option>
+                <option value="30">۳۰</option>
+            </select>
+        </p>
+        <p>
+            <input onclick="m_converted_date()" style="background-color: brown;" !important type="button"
+                id="miladi_shamsi" value="convert-تبدیل" class="left">
+        </p>
+    </div>
+    <p>
+        <hr>
+    </p>
+    <input style="color: aliceblue;background-color: rgb(112, 5, 5);" !important class="left" type="text"
+        placeholder="converted date" id="j_date_result" disabled>
+    <hr style="border-top: 1px dashed rgb(0, 0, 0);">
+
+
+
+<!--  
+    <div>
+        <input type="button" id="find_date" value="year" onclick="find_year()" class="find_date">
+        <input type="text" id="write_year" placeholder="today" class="write_date">
+    </div>
+   -->
+
+
 </body>
 
 </html>
